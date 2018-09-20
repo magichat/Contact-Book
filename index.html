@@ -8,8 +8,11 @@
     <!-- Import API thing -->
     <!-- <script src="lib/js-mem.js"></script> -->
 
+    <!-- <script src="lib/offline-json.json"></script> -->
+
     <!-- Vue.js dev -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- Vue.js prod -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
@@ -21,40 +24,16 @@
     <!-- App starts here -->
     <div id="app" class="appWrapper">
         <h1 class="header">Contact List</h1>
-        <section class="card">
-            <span class="card--firstName">James</span>
-            <span class="card--lastName">Smith</span>
-            <a class="card--phoneNumber" href="tel:01484710339">01484 710339</a>
-            <p class="card--viewMore">View More</p>
-        </section>
 
-        <section class="card">
-            <span class="card--firstName">James</span>
-            <span class="card--lastName">Smith</span>
-            <a class="card--phoneNumber" href="tel:01484710339">01484 710339</a>
-            <p class="card--viewMore">View More</p>
-        </section>
+        <template v-for="result in results">
+            <section class="card">
+                <span class="card--firstName">{{result.firstName}}</span>
+                <span class="card--lastName">{{result.lastName}}</span>
+                <a class="card--phoneNumber" :href="'tel:' + result.phone">{{result.phone}}</a>
+                <p class="card--viewMore">View More</p>
+            </section>
+        </template>
 
-        <section class="card">
-            <span class="card--firstName">James</span>
-            <span class="card--lastName">Smith</span>
-            <a class="card--phoneNumber" href="tel:01484710339">01484 710339</a>
-            <p class="card--viewMore">View More</p>
-        </section>
-
-        <section class="card">
-            <span class="card--firstName">James</span>
-            <span class="card--lastName">Smith</span>
-            <a class="card--phoneNumber" href="tel:01484710339">01484 710339</a>
-            <p class="card--viewMore">View More</p>
-        </section>
-
-        <section class="card">
-            <span class="card--firstName">fdsa</span>
-            <span class="card--lastName">Smifdsafdsath</span>
-            <a class="card--phoneNumber" href="tel:01484710339">01484 710339</a>
-            <p class="card--viewMore">View More</p>
-        </section>
     </div>
 
     <!-- App Logic -->
