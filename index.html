@@ -6,19 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Import API thing -->
-    <script src="lib/js-mem.js"></script>
+    <!-- <script src="lib/js-mem.js"></script> -->
 
     <!-- Vue.js dev -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <!-- Vue.js prod -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     <!-- App starts here -->
     <div id="app">
-        <h1>{{message}}</h1>
+        <h1 class="titleOfPage">Contact List</h1>
+        <section class="card">
+            <span class="card--firstName">James</span>
+            <span class="card--lastName">Smith</span>
+            <a class="card--phoneNumber" href="tel:01484710339">01484 710339</a>
+            <p class="card--viewMore">View More</p>
+        </section>
     </div>
 
     <!-- App Logic -->
