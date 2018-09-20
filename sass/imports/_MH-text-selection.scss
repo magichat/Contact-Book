@@ -1,0 +1,11 @@
+* {
+    &::-moz-selection { 
+        background: rebeccapurple;
+        color: white;
+    }
+
+    &::selection {
+        background: rebeccapurple;
+        color: white;
+    }
+}
