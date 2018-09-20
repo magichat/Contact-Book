@@ -1,3 +1,58 @@
 @import "helper/reset";
 @import "imports/MH-text-selection";
 @import "imports/colours";
+
+body {
+    background: $bg;
+}
+
+// Cheat Sheet https://css-tricks.com/snippets/css/complete-guide-grid/
+.appWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.header {
+    height: 50px;
+    border-bottom: 4px solid red;
+    font-size: 3rem;
+    text-align: center;
+    color: $offsetColour;
+}
+
+.card {
+    height: 100px;
+    margin: 20px 20px 0 20px;
+    background: white;
+    padding: 5px 10px;
+}
+
+.card--firstName {
+    font-size: 2rem;
+}
+
+.card--lastName {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: $background
+}
+
+.card--phoneNumber {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+    color: $linkBlue;
+
+    &:after {
+        content: "Tap to call";
+        margin-left: 5px;
+        color: black;
+    }
+}
+
+.card--viewMore {
+    margin-top: 20px;
+    text-align: right;
+}
