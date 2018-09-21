@@ -26,7 +26,6 @@
         <h1 class="header">Contact List</h1>
 
         <template v-for="result in results.slice(globalVar.pageCount, globalVar.pageCount + 4)">
-            <p>{{globalVar}}</p>
             <section class="card">
                 <span class="card--firstName">{{result.firstName}}</span>
                 <span class="card--lastName">{{result.lastName}}</span>
