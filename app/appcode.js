@@ -3,7 +3,9 @@ var app = new Vue({
     data: {
         results: [],
         fullData: [],
-        globalVar: []
+        globalVar: {
+            pageCount: 0
+        }
       },
       methods: {
         fullDataSet: function (targetDataSet) {
@@ -13,16 +15,17 @@ var app = new Vue({
         hidePopup: function () {
             document.getElementsByClassName("popup")[0].classList.add("popup__hide");
         },
-        jum: function (dir) {
-            var pageCount = 0;
-            if(dir == "b" && pageCount < 0){
-                pageCount--;
+        next: function () {
+            console.log("pageCount: " + this.globalVar.pageCount);
+            this.globalVar.pageCount += 4;
+            console.log("pageCount: " + this.globalVar.pageCount);
+        },
+        back: function () {
+            if(this.globalVar.pageCount != 0){
+                console.log("pageCount: " + this.globalVar.pageCount);
+                this.globalVar.pageCount -= 4;
+                console.log("pageCount: " + this.globalVar.pageCount);
             }
-            if(dir == "f"){
-                pageCount++;
-            }
-            this.globalVar = pageCount;
-            console.log(this.globalVar);
         }
       },
       mounted() {
