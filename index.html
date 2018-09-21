@@ -25,7 +25,7 @@
     <div id="app" class="appWrapper">
         <h1 class="header">Contact List</h1>
 
-        <template v-for="result in results">
+        <template v-for="result in results.slice(globalVar.pageCount, globalVar.pageCount + 4)">
             <section class="card">
                 <span class="card--firstName">{{result.firstName}}</span>
                 <span class="card--lastName">{{result.lastName}}</span>
@@ -33,6 +33,8 @@
                 <p class="card--viewMore" @click="fullDataSet(result)">View More</p>
             </section>
         </template>
+        <span class="arrow arrow--back" @click="back">&lt;</span>
+        <span class="arrow arrow--forward" @click="next">&gt;</span>
 
         <template>
             <section class="popup popup__hide">
