@@ -30,7 +30,18 @@
                 <span class="card--firstName">{{result.firstName}}</span>
                 <span class="card--lastName">{{result.lastName}}</span>
                 <a class="card--phoneNumber" :href="'tel:' + result.phone">{{result.phone}}</a>
-                <p class="card--viewMore">View More</p>
+                <p class="card--viewMore" @click="fullDataSet(result)">View More</p>
+            </section>
+        </template>
+
+        <template>
+            <section class="popup popup__hide">
+                <span class="popup--close" @click="hidePopup">Close</span>
+                <span class="popup--firstName">{{fullData.firstName}}</span>
+                <span class="popup--lastName">{{fullData.lastName}}</span>
+                <span class="popup--phone">Phone:<a :href="'tel:' + fullData.phone">{{fullData.phone}}</a></span>
+                <span class="popup--mobile">Mobile:<a :href="'tel:' + fullData.mobile">{{fullData.mobile}}</a></span>
+                <span class="popup--address">{{fullData.address}}</span>
             </section>
         </template>
 

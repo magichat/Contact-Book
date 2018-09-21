@@ -56,3 +56,49 @@ body {
     margin-top: 20px;
     text-align: right;
 }
+
+.popup {
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    padding: 5px 10px;
+    margin: 0 20px;
+    background: white;
+    box-shadow: 0 0 0 100vh rgba(black, .9);
+}
+
+.popup--firstName {
+    font-size: 2rem;
+}
+
+.popup--lastName {
+    font-size: 1.8rem;
+}
+
+.popup--phone  {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.popup--mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.popup--address {
+    font-size: 1.3rem;
+}
+
+.popup__hide {
+    display: none;
+}
+
+.popup--close {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: $linkBlue;
+}
