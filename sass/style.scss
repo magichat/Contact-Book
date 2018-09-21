@@ -102,3 +102,18 @@ body {
     text-align: right;
     color: $linkBlue;
 }
+
+.arrow {
+    font-size: 2rem;
+    float: left;
+    margin: 0 40px;
+}
+
+.arrow--forward {
+    text-align: right;
+    margin-top: -30px;
+}
+
+.arrow--back {
+    text-align: left;
+}
